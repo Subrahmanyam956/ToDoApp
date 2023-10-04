@@ -40,10 +40,13 @@ export class TodosComponent implements OnInit{
   }
 
   addTodo(): void {
+    if (this.inputTodo != "") 
+    {
     this.todos.push({
       content: this.inputTodo,
       completed: false
-    })
+      })
     this.inputTodo = "";
+    }
   }
 }
